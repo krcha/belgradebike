@@ -29,8 +29,6 @@ define('DB_COLLATE', '');
  */
 $table_prefix  = 'wp_';
 
-define( 'WP_MEMORY_LIMIT', '256M' );
-
 /**
  * For developers: WordPress debugging mode.
  */
@@ -39,14 +37,14 @@ define('WP_DEBUG', false);
 /**#@+
  * Authentication Unique Keys and Salts.
  */
-define( 'AUTH_KEY',         'hypyxmbeMEmGAXyPZgJWznuLhCLWdykAEqBrvTqBzVQDmfuhDzvJxPyxFgVQRmOT' );
-define( 'SECURE_AUTH_KEY',  'PebqMriURCTKQNeuggITDUlPOwDTqpsWYcdvXQsrhcAXYnZZtLMYfdfaDlBgXKSf' );
-define( 'LOGGED_IN_KEY',    'XphtZaZaxJnjjOZDzUvBTXpjcpHziPzwGWKxDOaBEObKCxWiTcALUOZEVcvRmcXH' );
-define( 'NONCE_KEY',        'KyPwhRgtjfMFJwmNQFZvTaDGkkFRTmgtyYTWDkaRxMTgSSxEagLxfPDgwAqQEgSS' );
-define( 'AUTH_SALT',        'PuHbtKVbJkTnLXdsOdFdCPoWydlZsncwsmACbpWdBMZLPIChdsNPfleMADINIGLj' );
-define( 'SECURE_AUTH_SALT', 'oRjLhRiGNnuhcFiPcnhADqwEhFXPFnbaTqRCSpbINdURVnCJAKKTDZEmpSRleTcy' );
-define( 'LOGGED_IN_SALT',   'gszIhYJKkeQKzHruXaRGSPLFvKWGvNgVfXUtsXkhDrqRkuRFjVVYLvLWmUdVeqYX' );
-define( 'NONCE_SALT',       'dplBznIoEjzgnfkcscTaQkAhXGPYtHtGhuZxVuHXfZTyouYhqFJrXUyGYeoeEzuN' );
+define( 'AUTH_KEY',         'XcsApVptimppMXgKIHnGtpdREVAlRYtCRxQcbbaNSONGrGrWXaplSheGuFrxVvFK' );
+define( 'SECURE_AUTH_KEY',  'GagtdIcOmXFYbjkxBwiRivtveeGdmIgdlbhbxKxlHJbOhsCYEZaSvYjepSMKyrao' );
+define( 'LOGGED_IN_KEY',    'CJTlBgZSUpcaJpOkbPnTFzmqfjSiSTRWersXsgYBkWZRJBuBbvKQhxPEPeKVvkXK' );
+define( 'NONCE_KEY',        'oWeCRYqgXaSXefPdWEtaOntBsOlFtkpyhrosQUUpXzbOONMDzYxwCQPPgXovrQNR' );
+define( 'AUTH_SALT',        'rLHQdVxBqBOJbzDpCVHTYoiydBRBJBIbpHlcslViPPZDEkZdowSRFokIywKqEkzc' );
+define( 'SECURE_AUTH_SALT', 'YnycjypjYkDZEJdXgnbLTbnMCrXncxzxaQXXLeoYpruLBbcoGuzUmIUgvXlZsUPL' );
+define( 'LOGGED_IN_SALT',   'jeCLUPHLdRkWDSsaAsksRjqymDDVXidHAUYKyrAYzguXHzEGbRFJEvUNFwFwYqxV' );
+define( 'NONCE_SALT',       'ZcmmZkRDrIBqTLfmNIdLCVCuUVEhjDOQYTuCHEpJYEUcmIeuAtmArOXjDkFlqbTy' );
 
 /* That's all, stop editing! Happy blogging. */
 
