@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Checkout Files Upload for WooCommerce
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Checkout Files Upload for WooCommerce 1.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/checkout-files-"
+"upload-woocommerce\n"
+"POT-Creation-Date: 2017-05-10 01:30+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: checkout-files-upload-woocommerce.php:112
+msgid "Settings"
+msgstr ""
+
+#: checkout-files-upload-woocommerce.php:113
+msgid "Unlock all"
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:79
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:127
+msgid "File"
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:101
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:212
+msgid "File is required!"
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:111
+#: includes/class-alg-wc-checkout-files-upload.php:248
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:205
+#, php-format
+msgid "Wrong file type: \"%s\"!"
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:131
+msgid "Uploaded Files"
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:163
+msgid "No files uploaded."
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:220
+#: includes/class-alg-wc-checkout-files-upload.php:228
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:235
+#, php-format
+msgid "File \"%s\" was successfully removed."
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:260
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:220
+#, php-format
+msgid "File \"%s\" was successfully uploaded."
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:268
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:227
+msgid "Please select file to upload!"
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:421
+#: includes/class-alg-wc-checkout-files-upload.php:422
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:190
+msgid "Upload"
+msgstr ""
+
+#: includes/class-alg-wc-checkout-files-upload.php:430
+#: includes/class-alg-wc-checkout-files-upload.php:431
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:197
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-emails.php:24
+msgid "Emails"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-emails.php:38
+msgid "Emails Options"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-emails.php:43
+msgid "Attach Files to Admin's New Order Emails"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-emails.php:44
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-emails.php:51
+msgid "Attach"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-emails.php:50
+msgid "Attach Files to Customer's Processing Order Emails"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:25
+msgid "General"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:40
+msgid "Checkout Files Upload Options"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:42
+msgid "Let your customers upload files on (or after) WooCommerce checkout."
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:46
+msgid "WooCommerce Checkout Files Upload"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:47
+msgid "Enable"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:48
+msgid "Checkout Files Upload for WooCommerce."
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:103
+msgid "Files Options"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:108
+msgid "Total Files"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:110
+msgid "<em>Save changes</em> after you change this number."
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:115
+#, php-format
+msgid "Get %s plugin to change this number"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:117
+msgid "Checkout Files Upload for WooCommerce Pro"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:129
+msgid "Enabled"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:135
+msgid "Required"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:141
+msgid "Position"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:145
+msgid "Before checkout form"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:146
+msgid "After checkout form"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:147
+msgid "Do not add on checkout"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:152
+msgid "Position order (i.e. priority)"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:161
+msgid "Add to Thank You page"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:167
+msgid "Add to My Account page"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:172
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-template.php:50
+msgid "Label"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:173
+msgid "Leave blank to disable label"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:175
+msgid "Please select file to upload"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:180
+msgid "Accepted file types"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:181
+msgid ""
+"Accepted file types. E.g.: \".jpg,.jpeg,.png\". Leave blank to accept all "
+"files"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:188
+msgid "Label: Upload button"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:195
+msgid "Label: Remove button"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:202
+msgid "Notice: Wrong file type"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:203
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:218
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:233
+#, php-format
+msgid "%s will be replaced with file name"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:210
+msgid "Notice: File is required"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:217
+msgid "Notice: File was successfully uploaded"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:225
+msgid "Notice: No file selected"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:232
+msgid "Notice: File was successfully removed"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:241
+msgid "PRODUCTS to show this field"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:242
+msgid ""
+"To show this field only if at least one selected product is in cart, enter "
+"products here. Leave blank to show for all products."
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:251
+msgid "CATEGORIES to show this field"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:252
+msgid ""
+"To show this field only if at least one product of selected category is in "
+"cart, enter categories here. Leave blank to show for all products."
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:261
+msgid "TAGS to show this field"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-general.php:262
+msgid ""
+"To show this field only if at least one product of selected tag is in cart, "
+"enter tags here. Leave blank to show for all products."
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-template.php:24
+msgid "Template"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-template.php:38
+msgid "Form Template Options"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-template.php:43
+msgid "Before"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-template.php:51
+msgid "Replaced values: %field_id%, %field_label%, %required_html%."
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-template.php:58
+msgid "Field"
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-template.php:59
+msgid "Replaced values: %field_html%, %button_html%."
+msgstr ""
+
+#: includes/admin/class-alg-wc-checkout-files-upload-settings-template.php:66
+msgid "After"
+msgstr ""
+
+#: includes/admin/class-wc-settings-checkout-files-upload.php:24
+msgid "Checkout Files Upload"
+msgstr ""
+
+#: includes/admin/class-wc-settings-checkout-files-upload.php:53
+msgid "Save changes"
+msgstr ""
