@@ -1,0 +1,536 @@
+<div class="container"> 
+    <div id="message" class="updated" ng-show="isVisibleMessageSavedBillingFields"><p><strong>Your settings are saved.</strong></p></div>
+    <div id="message" class="updated" ng-show="isVisibleMessageResetBillingFields"><p><strong>Your settings have been reset to their defaults.</strong></p></div>   
+    <div id="message" class="error" ng-show="isVisibleError"><p><strong>An error occurred during the action.</strong></p></div>
+    <br/>
+    <div class="col-xs-12 col-sm-6" >
+        <div class="row" style="margin-bottom: 10px;">
+            <button class="btn btn-default btn-sm btn-success"
+                    ng-disabled="disabledAddNewFields"
+                    ng-click="addNewCustomFields($event)">Add new field</button>
+        </div>
+        <div class="row">
+            <div woofieldseditorlist 
+                 woofieldseditorlist-datasource="fieldsSource" 
+                 woofieldseditorlist-options="listFieldsOptions"
+                 woofieldseditorlist-oninitialized="onFieldsListInitialized"></div>
+
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6" ng-show="isVisibleBasePropsEditor">
+        <div class="row">
+            <div class="panel panel-default fieldPropertyEditor-panel">
+
+                <div class="panel-body" >
+                    <div class="row fieldPropertyEditor-row">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <span class="fieldPropertyEditor-label">Name</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="text" class="fieldPropertyEditor-textInput" readonly ng-model="currentEdited.name" >
+                        </div>
+                    </div>
+                    <div class="row fieldPropertyEditor-row">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <span class="fieldPropertyEditor-label">Label</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="text" class="fieldPropertyEditor-textInput" ng-model="currentEdited.label" >
+                        </div>
+                    </div>         
+                    <div class="row fieldPropertyEditor-row">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <span class="fieldPropertyEditor-label">Placeholder</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="text" class="fieldPropertyEditor-textInput" ng-model="currentEdited.placeholder" >
+                        </div>
+                    </div>    
+                    <div class="row fieldPropertyEditor-row" ng-show="!currentEdited.standartField">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Show on order page</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="checkbox" class=""  ng-model="currentEdited.showForAdmin">
+                        </div>
+                    </div>
+                    <div class="row fieldPropertyEditor-row" ng-show="!currentEdited.standartField">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Show on order e-mail</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="checkbox" class=""  ng-model="currentEdited.showForEmail">
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Required</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="checkbox" class=""  ng-model="currentEdited.required">
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Clear</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="checkbox" class=""  ng-model="currentEdited.clear">
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Position</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <div flexwhale-lookup lookup-options="placementOptions" lookup-selected-items="selectedPlacement"></div>
+                        </div>
+                    </div>
+                    <div class="row fieldPropertyEditor-row" ng-show="currentEdited.standartField">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Visible</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="checkbox" ng-model="currentEdited.isVisible">
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row fieldPropertyEditor-row_longHeight" ng-show="dependentFieldsString !== ''">
+                        <div class="col-xs-12 col-sm-4">
+                            <span>Dependable fields</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <textarea class="fieldPropertyEditor-textArea" ng-model="dependentFieldsString" readonly></textarea>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!--  <div class="row fieldPropertyEditor-row" ng-show="currentEdited.currentRuleVisibility === 3">
+                          <div class="col-xs-12 col-sm-4">
+                              <span class="fieldPropertyEditor-label">Field</span>
+                          </div>
+                          <div class="col-xs-12 col-sm-8">
+                              <div flexwhale-lookup lookup-options="dependencyFieldsOptions" 
+                                   lookup-data-source="referenceFields"
+                                   lookup-selected-items="selectedDependsField"></div>
+                          </div>
+                      </div>-->
+
+
+
+
+
+                    <div ng-show="!currentEdited.standartField">
+                        <div class="row fieldPropertyEditor-row">
+                            <div class="col-xs-12 col-sm-4">
+                                <span class="fieldPropertyEditor-label">Editor type</span>
+                            </div>
+                            <div class="col-xs-12 col-sm-8">
+                                <div flexwhale-lookup lookup-options="editorTypeOptions" lookup-selected-items="selectedEditorType"></div>
+                            </div>
+                        </div>
+
+                        <div ng-show='currentEdited.typeField === 0'>  
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Default value</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" class="fieldPropertyEditor-textInput" ng-model="currentEdited.defaultValue">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-show='currentEdited.typeField === 1'>  
+                            <div class="row fieldPropertyEditor-row_longHeight">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Default value</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <textarea class="fieldPropertyEditor-textArea" ng-model="currentEdited.defaultValue"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-show='currentEdited.typeField === 2'>  
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Default value</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" class="fieldPropertyEditor-textInput" ng-model="currentEdited.defaultValue">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div ng-show='currentEdited.typeField === 3'>
+                            <div class="row fieldPropertyEditor-row" >
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Default value</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="checkbox" class="" ng-model="currentEdited.defaultValue">
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Text for 'checked'</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" class="fieldPropertyEditor-textInput" 
+                                           ng-model="currentEdited.textTrue"
+                                           placeholder="For example, 'Customer want to callback.'">
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Text for 'unchecked'</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" 
+                                           ng-model="currentEdited.textFalse"
+                                           class="fieldPropertyEditor-textInput" placeholder="For example, 'Customer don't want to callback.'">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-show='currentEdited.typeField === 4'>
+                            <div class="row fieldPropertyEditor-row_longHeight" >
+                                <div class="col-xs-12 col-sm-4">
+                                    <span>Values</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <textarea class="fieldPropertyEditor-textArea" 
+                                              ng-model="currentEdited.jsonArrayValue"
+                                              placeholder='For example: ["option1","option2","option3","option4"]'></textarea>
+                                </div>
+
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Default value</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" class="fieldPropertyEditor-textInput" 
+                                           ng-model="currentEdited.defaultValue"
+                                           placeholder='For example: option2'>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-show='currentEdited.typeField === 5'>
+                            <div class="row fieldPropertyEditor-row_longHeight" >
+                                <div class="col-xs-12 col-sm-4">
+                                    <span>Values</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <textarea 
+                                        ng-model="currentEdited.jsonArrayValue"
+                                        class="fieldPropertyEditor-textArea" placeholder='For example: ["option1","option2","option3","option4"]'></textarea>
+                                </div>
+
+                            </div>
+                            <div class="row fieldPropertyEditor-row_longHeight">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Default values</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <textarea class="fieldPropertyEditor-textArea" 
+                                              ng-model="currentEdited.defaultValue"
+                                              placeholder='For example: ["option2","option4"]'></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-show='currentEdited.typeField === 6'>
+                            <div class="row fieldPropertyEditor-row" >
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Default date</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" class="fieldPropertyEditor-textInput"
+                                           ng-model="currentEdited.defaultSelectedDate"
+                                           placeholder='For example: "+7", "0","+1m +7d","-1"'>
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Change month</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="checkbox" 
+                                           ng-model="currentEdited.changeMonth"
+                                           class="" >
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Change year</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="checkbox" 
+                                           ng-model="currentEdited.changeYear"
+                                           class="" >
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label" >Number of months</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" 
+                                           ng-model="currentEdited.numberOfMonths"
+                                           class="fieldPropertyEditor-textInput" placeholder='For example: "1","2","3"'>
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Date format</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" 
+                                           ng-model="currentEdited.dateFormat"
+                                           class="fieldPropertyEditor-textInput" placeholder='For example: "yy-mm-dd","mm/dd/yy"'>
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">First day</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" class="fieldPropertyEditor-textInput"
+                                           ng-model="currentEdited.firstDay"
+                                           placeholder='For example: "0","1","2"'>
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Min date</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" class="fieldPropertyEditor-textInput"
+                                           ng-model="currentEdited.minDate"
+                                           placeholder='For example: "+1m +7d","-1","6/21/2016"'>
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Max date</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="text" class="fieldPropertyEditor-textInput"
+                                           ng-model="currentEdited.maxDate"
+                                           placeholder='For example: "+1m +7d","-1","6/29/2016"'>
+                                </div>
+                            </div>
+                            <div class="row fieldPropertyEditor-row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <span class="fieldPropertyEditor-label">Show week</span>
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input type="checkbox" 
+                                           ng-model="currentEdited.showWeek"
+                                           class="" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-footer" style="height: 50px;">
+                        <button class="btn btn-default pull-right btn-sm " ng-click="cancelChanges($event)" style="margin-left:3px;">Cancel</button>
+                        <button class="btn btn-default pull-right btn-sm btn-success" ng-click="saveCurrentItem($event)">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="col-xs-12 col-sm-6" ng-show="isVisibleVisibilityRulesEditor">
+        <div class="row">
+            <div class="panel panel-default fieldPropertyEditor-panel">
+                <div class="panel-body" >
+                    <div class="row fieldPropertyEditor-row">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Server Filter</span>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <div flexwhale-lookup lookup-options="serverFilterOptions" 
+                                 lookup-selected-items="currentServerFilter"></div>
+                        </div>
+                    </div>
+                    <div class="row fieldPropertyEditor-row" style="height: 100px;"  ng-show="currentEdited.serverFilterMode === 1">
+                        <div class="col-xs-12 col-sm-4">
+                            <span>Show field in case the following products are added at the shopping cart:</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <div flexwhale-lookup lookup-options="productsSelectorOptions" lookup-selected-items="selectedProducts"></div>
+                        </div>
+                    </div>
+                    <div class="row fieldPropertyEditor-row" style="height: 100px;" ng-show="currentEdited.serverFilterMode === 2">
+                        <div class="col-xs-12 col-sm-4" >
+                            <span>Show field in case products from the following categories are added at the shopping cart:</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <div flexwhale-lookup lookup-options="categoriesSelectorOptions" lookup-selected-items="selectedCategories"></div>
+                        </div>
+                    </div>
+                    <div class="row fieldPropertyEditor-row">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Client Filter</span>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-8">   
+                            <input type="checkbox" ng-model="currentEdited.useClientFilter">
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row">
+                        <div class="col-xs-12 col-sm-12">
+                            <button class="btn btn-success btn-xs" ng-click="addNewClientRule()" ng-disabled="currentEdited.useClientFilter===false">Add new rule</button>
+                            <button class="btn btn-default btn-xs" ng-click="editClientRule()" ng-disabled="!currentRuleEdited ||currentEdited.useClientFilter===false">Edit</button>
+                            <button class="btn btn-default btn-xs" ng-click="deleteCurrentRule()" ng-disabled="!currentRuleEdited||currentEdited.useClientFilter===false">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row" style="min-height: 150px; overflow: auto;">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="list-group" ng-disabled="currentEdited.useClientFilter===false">                            
+                                <a class="list-group-item" 
+                                   ng-click="selectClientRule(ruleDescription)"
+                                   ng-class="currentRuleEdited===ruleDescription?'active':''"
+                                   ng-repeat="ruleDescription in currentEdited.arrayClientConditions track by $index">
+                                    <span ng-bind="getTextForRuleDescription(ruleDescription)"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel-footer" style="height: 50px;">
+                        <button class="btn btn-default pull-right btn-sm " ng-click="cancelChanges($event)" style="margin-left:3px;">Cancel</button>
+                        <button class="btn btn-default pull-right btn-sm btn-success" ng-click="saveCurrentItem($event)">Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-6" ng-show="showClientRulesEditor">
+        <div class="row">
+            <div class="panel panel-default fieldPropertyEditor-panel">
+                <div class="panel-body">
+                    <div class="row fieldPropertyEditor-row" >
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Field</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <div flexwhale-lookup lookup-options="dependencyFieldsOptions" 
+                                 lookup-data-source="referenceFields"
+                                 lookup-selected-items="selectedDependsField"></div>
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row" 
+                         ng-show="currentRuleEdited.typeField === 0">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Text</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="text" class="fieldPropertyEditor-textInput" ng-model="currentRuleEdited.value">
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row_longHeight" 
+                         ng-show="currentRuleEdited.typeField === 1">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Text</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <textarea class="fieldPropertyEditor-textArea" ng-model="currentRuleEdited.value"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row"
+                         ng-show="currentRuleEdited.typeField === 2">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Text</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="text" class="fieldPropertyEditor-textInput"  ng-model="currentRuleEdited.value">
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row" 
+                         ng-show="currentRuleEdited.typeField === 3">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Value</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="checkbox"  ng-model="currentRuleEdited.value">
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row" 
+                         ng-show="currentRuleEdited.typeField === 4">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Value</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="text" class="fieldPropertyEditor-textInput"
+                                   placeholder='For example: option2' 
+                                   ng-model="currentRuleEdited.value"
+                                   >
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row_longHeight" 
+                         ng-show="currentRuleEdited.typeField === 5">
+                        <div class="col-xs-12 col-sm-4">
+                            <span>Values</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <textarea class="fieldPropertyEditor-textArea" 
+                                      ng-model="currentRuleEdited.value"
+                                      placeholder='For example: ["option2","option4"]'></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row fieldPropertyEditor-row"
+                         ng-show="currentRuleEdited.typeField === 6">
+                        <div class="col-xs-12 col-sm-4">
+                            <span class="fieldPropertyEditor-label">Date</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <input type="text" class="fieldPropertyEditor-textInput" ng-model="currentRuleEdited.value">
+                        </div>
+                    </div>
+
+                    <div class="panel-footer" style="height: 50px;">
+                        <button class="btn btn-default pull-right btn-sm " ng-click="cancelClientRule($event)"
+                                style="margin-left:3px;">Cancel</button>
+                        <button class="btn btn-default pull-right btn-sm btn-success"
+                                ng-disabled="currentRuleEdited.typeField=== undefined"
+                                ng-click="saveClientRule($event)">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <div class="row">
+            <button class="btn btn-default btn-success" ng-click="saveFieldsSettings($event)" ng-disabled="disabledSaveBillingFields">Save fields settings</button>
+            <button class="btn btn-default btn-default" ng-click="resetFieldsSettings($event)" ng-disabled="disabledResetBillingFields">Restore default fields</button>
+        </div>
+    </div>
+</div>
+<br/>

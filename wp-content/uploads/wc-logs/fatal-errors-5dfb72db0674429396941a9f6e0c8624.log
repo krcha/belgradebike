@@ -1,0 +1,8 @@
+2018-05-08T19:31:53+00:00 CRITICAL Uncaught Error: Call to undefined function elegant_description() in /var/www/html/wp-content/plugins/divi-builder/includes/builder/template-preview.php:19
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(74): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown
+

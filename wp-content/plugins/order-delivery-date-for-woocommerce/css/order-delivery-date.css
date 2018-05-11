@@ -1,0 +1,58 @@
+.orddd-lite-days-fieldset {
+	border: 1px solid #DCDBDA;
+	float: left;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 0;
+	width:150px;
+}
+
+.days-fieldset label{
+	float: left;
+	font-weight: none;
+	padding: 0px;
+	width: auto;	
+}
+
+input[type="checkbox"] {
+  float: left !important;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 1px;
+}
+
+.form-table .orddd_lite_fieldset_padding {
+	 padding: 0.5px 0.5px;
+}
+
+#orddd_lite_minimumOrderDays, #orddd_lite_number_of_dates, #orddd_lite_lockout_date_after_orders {
+	 width: 75px;
+}
+
+#orddd_lite_delivery_date_field_note {
+	 width: 290px;
+}
+
+.orddd_lite_no_fields_for_product_type{
+	float:left;
+}
+
+.form-table .orddd_lite_holidays_list{
+	width: 360px;
+	vertical-align: top;
+	text-align: center;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+table.wp-list-table .column-holidays {
+	width:7%;
+}
+
+#orddd_lite_holidays_list {
+	width: 500px;
+}
+
+#holidays_table_head {
+	margin-bottom: 0px;
+}
